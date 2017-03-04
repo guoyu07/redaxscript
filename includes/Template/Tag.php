@@ -42,13 +42,15 @@ class Tag
 	 *
 	 * @since 3.0.0
 	 *
+	 * @param string $text
+	 *
 	 * @return string
 	 */
 
-	public static function title()
+	public static function title($text = null)
 	{
 		$title = new Head\Title(Registry::getInstance());
-		return $title->render();
+		return $title->render($text);
 	}
 
 	/**
@@ -269,13 +271,18 @@ class Tag
 	 *
 	 * @since 2.3.0
 	 *
+	 * @param string $filter
+	 *
 	 * @return string
 	 */
 
-	public static function extra()
+	public static function extra($filter = null)
 	{
 		// @codeCoverageIgnoreStart
-		return self::_migrate('extras');
+		return self::_migrate('extras',
+		[
+			$filter
+		]);
 		// @codeCoverageIgnoreEnd
 	}
 

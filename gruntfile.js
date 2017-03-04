@@ -316,21 +316,13 @@ module.exports = function (grunt)
 				],
 				dest: 'modules/Experiments/dist/scripts/experiments.min.js'
 			},
-			moduleGallery:
+			moduleLightGallery:
 			{
 				src:
 				[
-					'modules/Gallery/assets/scripts/gallery.js'
+					'modules/LightGallery/assets/scripts/light-gallery.js'
 				],
-				dest: 'modules/Gallery/dist/scripts/gallery.min.js'
-			},
-			moduleLazyLoad:
-			{
-				src:
-				[
-					'modules/LazyLoad/assets/scripts/lazy-load.js'
-				],
-				dest: 'modules/LazyLoad/dist/scripts/lazy-load.min.js'
+				dest: 'modules/LightGallery/dist/scripts/light-gallery.min.js'
 			},
 			moduleMaps:
 			{
@@ -340,13 +332,13 @@ module.exports = function (grunt)
 				],
 				dest: 'modules/Maps/dist/scripts/maps.min.js'
 			},
-			moduleShareThis:
+			moduleSocialSharer:
 			{
 				src:
 				[
-					'modules/ShareThis/assets/scripts/share-this.js'
+					'modules/SocialSharer/assets/scripts/social-sharer.js'
 				],
-				dest: 'modules/ShareThis/dist/scripts/share-this.min.js'
+				dest: 'modules/SocialSharer/dist/scripts/social-sharer.min.js'
 			},
 			moduleSyntaxHighlighter:
 			{
@@ -407,14 +399,6 @@ module.exports = function (grunt)
 				],
 				dest: 'templates/console/dist/styles/console.min.css'
 			},
-			templateCameleon:
-			{
-				src:
-				[
-					'templates/cameleon/assets/styles/_cameleon.css'
-				],
-				dest: 'templates/cameleon/dist/styles/cameleon.min.css'
-			},
 			templateDefault:
 			{
 				src:
@@ -422,14 +406,6 @@ module.exports = function (grunt)
 					'templates/default/assets/styles/_default.css'
 				],
 				dest: 'templates/default/dist/styles/default.min.css'
-			},
-			templateSkeleton:
-			{
-				src:
-				[
-					'templates/skeleton/assets/styles/_skeleton.css'
-				],
-				dest: 'templates/skeleton/dist/styles/skeleton.min.css'
 			},
 			templateInstall:
 			{
@@ -439,13 +415,13 @@ module.exports = function (grunt)
 				],
 				dest: 'templates/install/dist/styles/install.min.css'
 			},
-			templateWebsite:
+			templateSkeleton:
 			{
 				src:
 				[
-					'templates/website/assets/styles/_website.css'
+					'templates/skeleton/assets/styles/_skeleton.css'
 				],
-				dest: 'templates/website/dist/styles/website.min.css'
+				dest: 'templates/skeleton/dist/styles/skeleton.min.css'
 			},
 			moduleAce:
 			{
@@ -471,13 +447,13 @@ module.exports = function (grunt)
 				],
 				dest: 'modules/FeedReader/dist/styles/feed-reader.min.css'
 			},
-			moduleGallery:
+			moduleLightGallery:
 			{
 				src:
 				[
-					'modules/Gallery/assets/styles/_gallery.css'
+					'modules/LightGallery/assets/styles/_light-gallery.css'
 				],
-				dest: 'modules/Gallery/dist/styles/gallery.min.css'
+				dest: 'modules/LightGallery/dist/styles/light-gallery.min.css'
 			},
 			modulePreview:
 			{
@@ -487,14 +463,6 @@ module.exports = function (grunt)
 				],
 				dest: 'modules/Preview/dist/styles/preview.min.css'
 			},
-			moduleLazyLoad:
-			{
-				src:
-				[
-					'modules/LazyLoad/assets/styles/_lazy-load.css'
-				],
-				dest: 'modules/LazyLoad/dist/styles/lazy-load.min.css'
-			},
 			moduleMaps:
 			{
 				src:
@@ -503,13 +471,13 @@ module.exports = function (grunt)
 				],
 				dest: 'modules/Maps/dist/styles/maps.min.css'
 			},
-			moduleShareThis:
+			moduleSocialSharer:
 			{
 				src:
 				[
-					'modules/ShareThis/assets/styles/_share-this.css'
+					'modules/SocialSharer/assets/styles/_social-sharer.css'
 				],
-				dest: 'modules/ShareThis/dist/styles/share-this.min.css'
+				dest: 'modules/SocialSharer/dist/styles/social-sharer.min.css'
 			},
 			moduleTinymceContent:
 			{
@@ -672,38 +640,37 @@ module.exports = function (grunt)
 					template: 'templates/default/assets/styles/_icon.tpl'
 				}
 			},
-			templateWebsite:
+			moduleDirectoryLister:
 			{
 				src:
 				[
-					'node_modules/redaxscript-flaticon/flaticon/essential/agenda.svg',
-					'node_modules/redaxscript-flaticon/flaticon/design/cube.svg',
-					'node_modules/redaxscript-flaticon/flaticon/essential/alarm.svg',
-					'node_modules/redaxscript-flaticon/flaticon/essential/database-1.svg',
-					'node_modules/redaxscript-flaticon/flaticon/essential/magic-wand.svg',
-					'node_modules/redaxscript-flaticon/flaticon/essential/paper-plane-1.svg',
-					'node_modules/redaxscript-flaticon/flaticon/essential/settings-6.svg',
-					'node_modules/redaxscript-flaticon/flaticon/essential/stopwatch-1.svg',
-					'node_modules/redaxscript-flaticon/flaticon/productivity-and-development/rocket-ship.svg',
-					'node_modules/redaxscript-flaticon/flaticon/online-marketing/devices.svg',
-					'node_modules/redaxscript-flaticon/flaticon/programming-line/command-line.svg',
-					'node_modules/redaxscript-flaticon/flaticon/programming-line/editing-code.svg',
-					'node_modules/redaxscript-flaticon/flaticon/science/atoms.svg',
-					'node_modules/redaxscript-flaticon/flaticon/science/flask.svg',
-					'node_modules/redaxscript-flaticon/flaticon/security/antivirus.svg',
-					'node_modules/redaxscript-flaticon/flaticon/security/key.svg',
-					'node_modules/redaxscript-flaticon/flaticon/seo-and-analytics/analytics-2.svg',
-					'node_modules/redaxscript-flaticon/flaticon/stationery/layers.svg',
-					'node_modules/redaxscript-flaticon/flaticon/stationery/paint-palette-1.svg',
-					'node_modules/redaxscript-flaticon/flaticon/travel/cruise.svg'
+					'node_modules/material-design-icons/editor/svg/production/ic_insert_drive_file_24px.svg',
+					'node_modules/material-design-icons/file/svg/production/ic_folder_24px.svg',
+					'node_modules/material-design-icons/file/svg/production/ic_folder_open_24px.svg'
 				],
-				dest: 'templates/website/dist/fonts',
+				dest: 'modules/DirectoryLister/dist/fonts',
 				options:
 				{
-					destCss: 'templates/website/assets/styles',
-					template: 'templates/website/assets/styles/_icon.tpl',
-					codepoints: null,
-					rename: null
+					destCss: 'modules/DirectoryLister/assets/styles',
+					template: 'modules/DirectoryLister/assets/styles/_icon.tpl'
+				}
+			},
+			moduleSocialSharer:
+			{
+				src:
+				[
+					'node_modules/icomoon-free-npm/SVG/396-google-plus.svg',
+					'node_modules/icomoon-free-npm/SVG/401-facebook.svg',
+					'node_modules/icomoon-free-npm/SVG/407-twitter.svg',
+					'node_modules/icomoon-free-npm/SVG/459-linkedin2.svg',
+					'node_modules/icomoon-free-npm/SVG/463-stumbleupon.svg',
+					'node_modules/icomoon-free-npm/SVG/466-pinterest.svg'
+				],
+				dest: 'modules/SocialSharer/dist/fonts',
+				options:
+				{
+					destCss: 'modules/SocialSharer/assets/styles',
+					template: 'modules/SocialSharer/assets/styles/_icon.tpl'
 				}
 			},
 			options:
@@ -744,7 +711,11 @@ module.exports = function (grunt)
 				},
 				rename: function (name)
 				{
-					return grunt.path.basename(name).split('_').join('-').replace('ic-', '').replace('-24px', '');
+					return grunt.path.basename(name)
+						.replace('ic_', '')
+						.replace('_24px', '')
+						.split('_')
+						.join('-');
 				},
 				autoHint: false,
 				htmlDemo: false
@@ -816,7 +787,7 @@ module.exports = function (grunt)
 		},
 		rename:
 		{
-			iconAdmin:
+			templateAdmin:
 			{
 				src:
 				[
@@ -824,7 +795,7 @@ module.exports = function (grunt)
 				],
 				dest: 'templates/admin/assets/styles/_icon.css'
 			},
-			iconDefault:
+			templateDefault:
 			{
 				src:
 				[
@@ -832,13 +803,21 @@ module.exports = function (grunt)
 				],
 				dest: 'templates/default/assets/styles/_icon.css'
 			},
-			iconWebsite:
+			moduleDiretoryLister:
 			{
 				src:
 				[
-					'templates/website/assets/styles/icon.tpl'
+					'modules/DirectoryLister/assets/styles/icon.tpl'
 				],
-				dest: 'templates/website/assets/styles/_icon.css'
+				dest: 'modules/DirectoryLister/assets/styles/_icon.css'
+			},
+			moduleSocialSharer:
+			{
+				src:
+				[
+					'modules/SocialSharer/assets/styles/icon.tpl'
+				],
+				dest: 'modules/SocialSharer/assets/styles/_icon.css'
 			}
 		},
 		svgmin:
@@ -875,24 +854,13 @@ module.exports = function (grunt)
 			{
 				files:
 				[
-					'assets/styles/*.css',
-					'templates/**/assets/styles/*.css'
+					'assets/**/*.*',
+					'templates/**/assets/**/*.*',
+					'modules/**/assets/**/*.*'
 				],
 				tasks:
 				[
 					'build'
-				]
-			},
-			css:
-			{
-				files:
-				[
-					'assets/styles/*.css',
-					'templates/**/assets/styles/*.css'
-				],
-				tasks:
-				[
-					'build-css'
 				]
 			},
 			phpunit:
@@ -970,7 +938,7 @@ module.exports = function (grunt)
 	[
 		'shell:phpunit'
 	]);
-	grunt.registerTask('phpunitParallel',
+	grunt.registerTask('phpunit-parallel',
 	[
 		'shell:phpunitParallel'
 	]);
@@ -992,16 +960,16 @@ module.exports = function (grunt)
 	]);
 	grunt.registerTask('build',
 	[
-		'build-font',
-		'build-css',
-		'build-js'
+		'build-fonts',
+		'build-styles',
+		'build-scripts'
 	]);
-	grunt.registerTask('build-font',
+	grunt.registerTask('build-fonts',
 	[
 		'webfont',
 		'rename'
 	]);
-	grunt.registerTask('build-css',
+	grunt.registerTask('build-styles',
 	[
 		'postcss:base',
 		'postcss:templateAdmin',
@@ -1009,19 +977,17 @@ module.exports = function (grunt)
 		'postcss:templateDefault',
 		'postcss:templateInstall',
 		'postcss:templateSkeleton',
-		'postcss:templateWebsite',
 		'postcss:moduleAce',
 		'postcss:moduleDirectoryLister',
 		'postcss:moduleFeedReader',
-		'postcss:moduleGallery',
+		'postcss:moduleLightGallery',
 		'postcss:modulePreview',
-		'postcss:moduleLazyLoad',
 		'postcss:moduleMaps',
-		'postcss:moduleShareThis',
+		'postcss:moduleSocialSharer',
 		'postcss:moduleTinymceContent',
 		'postcss:moduleTinymceSkin'
 	]);
-	grunt.registerTask('build-js',
+	grunt.registerTask('build-scripts',
 	[
 		'uglify:base',
 		'uglify:templateAdmin',
@@ -1031,10 +997,9 @@ module.exports = function (grunt)
 		'uglify:moduleAnalytics',
 		'uglify:moduleCallHome',
 		'uglify:moduleExperiments',
-		'uglify:moduleGallery',
-		'uglify:moduleLazyLoad',
+		'uglify:moduleLightGallery',
 		'uglify:moduleMaps',
-		'uglify:moduleShareThis',
+		'uglify:moduleSocialSharer',
 		'uglify:moduleSyntaxHighlighter',
 		'uglify:moduleTinymce'
 	]);

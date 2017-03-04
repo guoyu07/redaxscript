@@ -4,7 +4,7 @@ namespace Redaxscript\Modules\Validator;
 use Redaxscript\Module;
 
 /**
- * children class to store module config
+ * children class to store module configuration
  *
  * @since 3.0.0
  *
@@ -30,7 +30,7 @@ class Config extends Module\Module
 			'warning' => 'rs-admin-is-warning',
 			'error' => 'rs-admin-is-error'
 		],
-		'url' => 'https://validator.w3.org/nu/?doc=',
+		'apiUrl' => 'https://validator.w3.org/nu/?doc=',
 		'typeArray' =>
 		[
 			'warning',

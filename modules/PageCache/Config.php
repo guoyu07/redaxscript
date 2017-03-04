@@ -4,7 +4,7 @@ namespace Redaxscript\Modules\PageCache;
 use Redaxscript\Module;
 
 /**
- * children class to store module config
+ * children class to store module configuration
  *
  * @since 3.0.0
  *
@@ -25,7 +25,7 @@ class Config extends Module\Module
 	[
 		'directory' => 'cache/pages',
 		'extension' => 'phtml',
-		'lifetime' => 86400,
+		'lifetime' => 3600,
 		'tokenPlaceholder' => '%TOKEN%'
 	];
 }
