@@ -1,7 +1,7 @@
 {
 	"name": "redaxmedia/redaxscript",
 	"description": "Ultra lightweight Content Management System",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"homepage": "http://redaxscript.com",
 	"license": "GPL-3.0",
 	"require":
@@ -13,7 +13,7 @@
 	"require-dev":
 	{
 		"brianium/paratest": "0.14.0",
-		"drupal/coder": "8.2.10",
+		"drupal/coder": "8.2.11",
 		"johnkary/phpunit-speedtrap": "1.0.1",
 		"mikey179/vfsStream": "1.6.4",
 		"phpbench/phpbench": "0.13.0",
@@ -21,7 +21,7 @@
 		"redaxmedia/tocgen": "4.1.1",
 		"satooshi/php-coveralls": "1.0.1",
 		"sebastian/phpcpd": "3.0.0",
-		"squizlabs/php_codesniffer": "2.8.0"
+		"squizlabs/php_codesniffer": "2.8.1"
 	},
 	"scripts":
 	{
