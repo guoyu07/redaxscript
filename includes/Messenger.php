@@ -274,7 +274,7 @@ class Messenger
 
 		else
 		{
-			$boxElement->html(array_key_exists(0, $message) ? $message[0] : $message);
+			$boxElement->html((is_array($message) && array_key_exists(0, $message)) ? $message[0] : $message);
 		}
 
 		/* collect output */

@@ -48,7 +48,7 @@ abstract class Singleton
 
 		/* create instance */
 
-		if (!array_key_exists($className, static::$_instance))
+		if (!is_array(static::$_instance) || !array_key_exists($className, static::$_instance))
 		{
 			static::$_instance[$className] = new static();
 		}

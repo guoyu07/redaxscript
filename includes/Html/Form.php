@@ -631,7 +631,7 @@ class Form extends HtmlAbstract
 					->copy()
 					->attr(
 					[
-						'selected' => $value === $selected || in_array($value, $selected) ? 'selected' : null,
+						'selected' => $value === $selected || (is_array($selected) && in_array($value, $selected)) ? 'selected' : null,
 						'value' => $value
 					])
 					->text(is_string($key) ? $key : $value);

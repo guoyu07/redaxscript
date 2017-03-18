@@ -75,23 +75,30 @@ class CallHome extends Module\Module
 
 		/* process version */
 
-		foreach ($versionArray as $version)
+		if ($versionArray)
 		{
-			foreach ($version as $type => $message)
+			foreach ($versionArray as $version)
 			{
-				$this->setNotification($type, $message);
+				foreach ($version as $type => $message)
+				{
+					$this->setNotification($type, $message);
+				}
 			}
 		}
 
 		/* process news */
 
-		foreach ($newsArray as $news)
+		if ($newsArray)
 		{
-			foreach ($news as $type => $message)
+			foreach ($newsArray as $news)
 			{
-				$this->setNotification($type, $message);
+				foreach ($news as $type => $message)
+				{
+					$this->setNotification($type, $message);
+				}
 			}
 		}
+
 		return $this->getNotification();
 	}
 }

@@ -150,7 +150,7 @@ class Auth
 	public function __call($method = null, $argumentArray = [])
 	{
 		$type = $argumentArray[0];
-		if (array_key_exists($method, $this->_callArray[$type]))
+		if (is_array($this->_callArray[$type]) && array_key_exists($method, $this->_callArray[$type]))
 		{
 			return in_array($this->_callArray[$type][$method], $this->getPermission($type));
 		}

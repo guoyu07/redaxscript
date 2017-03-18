@@ -19,7 +19,7 @@ class Config extends Singleton
 	 * @var string
 	 */
 
-	protected static $_configFile = 'config.php';
+	protected static $_configFile = './config.php';
 
 	/**
 	 * array of the config
