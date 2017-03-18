@@ -162,24 +162,29 @@ class Link extends HeadAbstract
 		$linkElement = new Html\Element();
 		$linkElement->init('link');
 		$collectionArray = self::$_collectionArray[self::$_namespace];
-		$collectionKeys = array_keys($collectionArray);
-		$lastKey = end($collectionKeys);
 
-		/* process collection */
-
-		foreach ($collectionArray as $key => $attribute)
+		if (!is_null($collectionArray))
 		{
-			if ($attribute['href'])
+			$collectionKeys = array_keys($collectionArray);
+			$lastKey = end($collectionKeys);
+
+			/* process collection */
+
+			foreach ($collectionArray as $key => $attribute)
 			{
-				$output .= $linkElement
-					->copy()
-					->attr($attribute);
-				if ($key !== $lastKey)
+				if ($attribute['href'])
 				{
-					$output .= PHP_EOL;
+					$output .= $linkElement
+						->copy()
+						->attr($attribute);
+					if ($key !== $lastKey)
+					{
+						$output .= PHP_EOL;
+					}
 				}
 			}
 		}
+
 		$this->clear();
 		return $output;
 	}

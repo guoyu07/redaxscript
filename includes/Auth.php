@@ -156,7 +156,11 @@ class Auth
 		}
 		if ($method === 'getFilter')
 		{
-			return !in_array($this->_callArray['filter'][$method], $this->getPermission('filter'));
+			$filter = $this->getPermission('filter');
+			if (is_array($filter))
+			{
+				return !in_array($this->_callArray['filter'][$method], $filter);
+			}
 		}
 	}
 
@@ -169,13 +173,16 @@ class Auth
 	public function init()
 	{
 		$authArray = $this->_getAuth();
-		if (array_key_exists('user', $authArray))
+		if (is_array($authArray))
 		{
-			$this->_userArray = $authArray['user'];
-		}
-		if (array_key_exists('permission', $authArray))
-		{
-			$this->_permissionArray = $authArray['permission'];
+			if (array_key_exists('user', $authArray))
+			{
+				$this->_userArray = $authArray['user'];
+			}
+			if (array_key_exists('permission', $authArray))
+			{
+				$this->_permissionArray = $authArray['permission'];
+			}
 		}
 	}
 
@@ -338,7 +345,11 @@ class Auth
 	public function getStatus()
 	{
 		$authArray = $this->_getAuth();
-		return array_key_exists('user', $authArray) && array_key_exists('permission', $authArray);
+		if (is_array($authArray))
+		{
+			return array_key_exists('user', $authArray) && array_key_exists('permission', $authArray);
+		}
+		return false;
 	}
 
 	/**
