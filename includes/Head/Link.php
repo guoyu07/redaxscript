@@ -163,7 +163,7 @@ class Link extends HeadAbstract
 		$linkElement->init('link');
 		$collectionArray = self::$_collectionArray[self::$_namespace];
 
-		if ($collectionArray !== NULL)
+		if ($collectionArray !== null)
 		{
 			$collectionKeys = array_keys($collectionArray);
 			$lastKey = end($collectionKeys);
