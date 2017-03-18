@@ -285,6 +285,14 @@ class Form extends HtmlAbstract
 
 		if (array_key_exists($method, $this->_attributeArray['button']))
 		{
+			if (!isset($argumentArray[0]))
+			{
+				$argumentArray[0] = null;
+			}
+			if (!isset($argumentArray[1]))
+			{
+				$argumentArray[1] = null;
+			}
 			return $this->_createButton($method, $argumentArray[0], $argumentArray[1]);
 		}
 

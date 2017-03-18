@@ -232,6 +232,7 @@ class Messenger
 	{
 		$output = Module\Hook::trigger('messengerStart');
 		$outputItem = null;
+		$titleElement = null;
 
 		/* html elements */
 
@@ -310,7 +311,7 @@ class Messenger
 
 			/* meta redirect */
 
-			if (is_numeric($this->_actionArray['redirect']))
+			if (isset($this->_actionArray['redirect']) && is_numeric($this->_actionArray['redirect']))
 			{
 				$metaElement = new Html\Element();
 				$output .= $metaElement->init('meta',
